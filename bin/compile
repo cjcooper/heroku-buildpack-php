@@ -31,7 +31,7 @@ if [ -f www/Procfile ]; then
 fi
 
 APACHE_URL="https://github.com/cjcooper/heroku-buildpack-php/blob/master/apache-$APACHE_VERSION.tar.gz"
-echo "-----> Bundling Apache version $APACHE_VERSION"
+echo "-----> Bundling Apache version $APACHE_VERSION proxy"
 curl --silent --max-time 60 --location "$APACHE_URL" | tar xz
 
 PHP_URL="https://s3.amazonaws.com/php-lp/php-$PHP_VERSION.tar.gz"
