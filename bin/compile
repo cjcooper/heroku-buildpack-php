@@ -30,6 +30,8 @@ if [ -f www/Procfile ]; then
   mv www/Procfile .
 fi
 
+rm -rf $APACHE_PATH
+mkdir $APACHE_PATH
 cd $APACHE_PATH
 APACHE_URL="https://raw.github.com/cjcooper/heroku-buildpack-php/master/apache-$APACHE_VERSION.tgz"
 echo "-----> Bundling Apache version $APACHE_VERSION from $APACHE_URL"
